@@ -22,30 +22,36 @@ function Budgets() {
   let totalAmount = budgets
     .map((budgets) => budgets.amount)
     .reduce((a, b) => Number(a) + Number(b), 0);
+  
+   let dollarUS = Intl.NumberFormat('en-US', {
+     style: 'currency',
+     currency: 'USD',
+   });
 
   return (
-    <div className="Budgets">
-      <h1>
-        Index:<span>{totalAmount}</span>{' '}
-      </h1>
-
-      <section>
-        <table>
-          <thead>
+    <section className="section single-page">
+      <div className="section-title">
+        <h1>
+          Balance Total:{''} <span>{dollarUS.format(totalAmount)}</span>
+        </h1>
+        <div className="underline"></div>
+      </div>
+      <div>
+        
+          <table className="budgets-table">
             <tr>
               <th>Date</th>
               <th>Category</th>
               <th>Amount</th>
             </tr>
-          </thead>
-          <tbody>
+
             {budgets.map((budget, index) => {
               return <Budget key={index} budget={budget} index={index} />;
             })}
-          </tbody>
-        </table>
-      </section>
-    </div>
+          </table>
+        </div>
+   
+    </section>
   );
 }
 

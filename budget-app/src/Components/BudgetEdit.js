@@ -44,56 +44,61 @@ function BudgetEdit() {
   };
 
   return (
-    <div className="Edit">
-      <h1>Edit Transaction</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="date">Date:</label>
-        <input
-          name="date"
-          id="date"
-          type="text"
-          value={budget.date}
-          onChange={handleTextChange}
-          placeholder="Date"
-          required
-        />
-        <label htmlFor="name">Name:</label>
-        <input
-          name="name"
-          id="name"
-          type="text"
-          value={budget.name}
-          onChange={handleTextChange}
-          placeholder="Name"
-          required
-        />
-        <label htmlFor="amount">Amount:</label>
-        <input
-          name="amount"
-          id="amount"
-          type="number"
-          value={budget.amount}
-          onChange={handleTextChange}
-          placeholder="Amount"
-          required
-        />
-        <label htmlFor="category">Category:</label>
-        <input
-          name="category"
-          id="category"
-          type="text"
-          value={budget.category}
-          onChange={handleTextChange}
-          placeholder="Category"
-          required
-        />
+    <section className="section single-page">
+      <div className="section-title">
+        <h1>Edit Transaction</h1>
+        <div className='underline'></div>
+      </div>
+      <div className='edit-form'>
+        <form className='edit' onSubmit={handleSubmit}>
+          <label htmlFor="date">Date:</label>
+          <input
+            name="date"
+            id="date"
+            type="text"
+            value={budget.date}
+            onChange={handleTextChange}
+            placeholder="Date"
+            required
+          />
+          <label htmlFor="name">Name:</label>
+          <input
+            name="name"
+            id="name"
+            type="text"
+            value={budget.name}
+            onChange={handleTextChange}
+            placeholder="Name"
+            required
+          />
+          <label htmlFor="amount">Amount:</label>
+          <input
+            name="amount"
+            id="amount"
+            type="number"
+            value={budget.amount}
+            onChange={handleTextChange}
+            placeholder="Amount"
+            required
+          />
+          <label htmlFor="category">Category:</label>
+          <input
+            name="category"
+            id="category"
+            type="text"
+            value={budget.category}
+            onChange={handleTextChange}
+            placeholder="Category"
+            required
+          />
 
-        <input type="submit" />
-      </form>
-      <Link to={`/budgets/${index}`}>
-        <button>Back</button>
-      </Link>
-    </div>
+          <input type="submit" />
+        </form>
+        <Link to={`/budgets/${index}`}>
+          <button className='btn'>Back</button>
+        </Link>
+      </div>
+    </section>
   );
 }
 
