@@ -21,7 +21,7 @@ Variables
   --clr-primary-5: hsl(316, 53%, 68%);
   /* lighter shades of primary color */
   --clr-primary-6: hsl(308, 58%, 60%);
-  --clr-primary-7: hsl(298, 77%, 76%);
+  --clr-primary-7: hsl(297, 50%, 92%);
   --clr-primary-8: hsl(306, 77%, 88%);
   --clr-primary-9: hsl(314, 48%, 87%);
   --clr-primary-10: hsl(314, 66%, 89%);
@@ -255,7 +255,7 @@ Navbar
   padding-bottom: 3rem;
 }
 .single-page{
-  background: var(--clr-primary-10);
+  background:color #f2f2f2;
   min-height: calc(100vh - 5rem - 198px);
 }
 
